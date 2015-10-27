@@ -22,3 +22,5 @@ raw.each do |line|
     calculate_gc_content(line)
   end
 end
+
+fasta_matcher = Regexp.match(/>Rosalind_\d{4}/)
