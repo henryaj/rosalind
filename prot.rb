@@ -6,7 +6,7 @@ seq = ARGV[0].each_char.to_a
 result = ""
 
 loop do
-  triplet = seq.slice!(3)
+  triplet = seq.slice!(0,3)
   codon = CODONS.fetch(triplet.join)
   result += codon
 end
