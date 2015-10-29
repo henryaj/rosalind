@@ -3,17 +3,12 @@ CODONS = {
 }
 STOP_CODONS = ["UAG", "UGA", "UAA"]
 
-seq = ARGV[0].each_char.to_a
-result = ""
+require 'pry'; binding.pry
+sequence = ARGV[0].each_char.to_a
 
-while seq.any?
-  triplet = seq.slice!(0,3)
-  codon = CODONS.fetch(triplet.join)
+codons = sequence.each_slice(3).each(&:join).to_a
+
+puts codons.inject("") do |result, codon|
   result += codon
-  break if STOP_CODONS.include?(codon)
+  result
 end
-
-puts result
-
-
-
