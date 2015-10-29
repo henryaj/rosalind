@@ -7,10 +7,14 @@ seq = ARGV[0].each_char.to_a
 result = ""
 
 loop do
+  break unless seq.any?
   triplet = seq.slice!(0,3)
   codon = CODONS.fetch(triplet.join)
   result += codon
+  break if STOP_CODONS.include?(codon)
 end
+
+puts result
 
 
 
