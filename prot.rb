@@ -6,8 +6,7 @@ STOP_CODONS = ["UAG", "UGA", "UAA"]
 seq = ARGV[0].each_char.to_a
 result = ""
 
-loop do
-  break unless seq.any?
+while seq.any?
   triplet = seq.slice!(0,3)
   codon = CODONS.fetch(triplet.join)
   result += codon
