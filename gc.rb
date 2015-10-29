@@ -24,3 +24,6 @@ raw.each do |line|
 end
 
 fasta_matcher = Regexp.match(/>Rosalind_\d{4}/)
+
+gc_count = seq.count('C') + seq.count('G')
+gc_fract = gc_count / seq.length
