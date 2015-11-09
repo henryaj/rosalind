@@ -1,10 +1,10 @@
-string1 = ARGV[0]
-string2 = ARGV[1]
+fragment1 = ARGV[0]
+fragment2 = ARGV[1]
 
 hamming_number = 0
 
-string1.chars.each_with_index do |base, index|
-  if base != string2[index]
+fragment1.chars.each_with_index do |base, index|
+  if base != fragment2[index]
     hamming_number += 1
   end
 end
