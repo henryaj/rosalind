@@ -21,7 +21,7 @@ raw.each do |line|
   end
 end
 
-fasta_matcher = Regexp.match(/>Rosalind_\d{4}/)
+fasta_matcher = Regexp.match(/>Rosalind_\d{4}/) # gets Rosalind followed by underscore and four digits 
 
 gc_count = seq.count('C') + seq.count('G')
 gc_fract = gc_count / seq.length
