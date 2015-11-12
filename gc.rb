@@ -10,7 +10,7 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT}
 
 raw = SAMPLE_DATA.split("\n")
 
-current_name = ""
+current_name = "" 
 highest_gc = []
 
 raw.each do |line|
